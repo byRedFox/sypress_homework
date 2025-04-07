@@ -1,8 +1,8 @@
 describe('Покемоны и Аватары', function () {
     it('Покупаю новый аватар для своего Чемпиона!', function () {
         cy.visit('https://pokemonbattle.ru/');
-        cy.get('#k_email').type('its.done.its.work@yandex.ru'); // Находим поле логи и вводим верный логин
-        cy.get('#k_password').type('Year2025'); // Находим поле пароля и вводим верный пароль
+        cy.get('#k_email').type('USER_LOGIN'); // Находим поле логи и вводим верный логин
+        cy.get('#k_password').type('USER_PASSWORD'); // Находим поле пароля и вводим верный пароль
         cy.get('.MuiButton-root').click(); // Находим кнопку "Войти" и кликаем на нее
         // cy.wait(1000) Sypress умеет сам подождать как я выяснил, жесткие рамки в нашем случае не обязательны именно для сайта покемонов;
         cy.get('.header_card_trainer_id_num').click(); // Находим элемент "Профиль" и кликаем на него
